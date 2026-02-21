@@ -39,7 +39,7 @@ params = {
 
     # Dataset
     "dataset": "sleepedfx",
-    "data_dir": "E:\\EEG\\EEG-Sleep\\sleepedf\\sleep-cassette\\eeg_fpz_cz"",
+    "data_dir": "E:\\EEG\\EEG-Sleep\\sleepedf\\sleep-cassette\\eeg_fpz_cz",
     "n_folds": 10,
     "n_subjects": 78,
 

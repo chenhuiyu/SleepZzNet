@@ -107,11 +107,9 @@ def train(config_file, output_dir, random_seed):
 
     SleepZznet.compile(
         optimizer='adam',
-        # todo: focal loss
-        loss=[categorical_focal_loss(alpha=[norm_weight], gamma=2)],
-        # todo: weighted Crossentropy loss
-        # loss=tf.keras.losses.SparseCategoricalCrossentropy(),
-        metrics=['acc'],
+        # focal loss on sparse integer labels
+        loss=categorical_focal_loss(alpha=norm_weight, gamma=2),
+        metrics=[tf.keras.metrics.SparseCategoricalAccuracy(name='acc')],
     )
 
     # Model Fit

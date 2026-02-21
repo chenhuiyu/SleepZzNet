@@ -37,8 +37,8 @@ python download_sleepedf.py
 
 - Train and Evaluation Sleep-EDF 
 
-```
-$ python main.py run_train.py
+```bash
+python run_train.py --dataset_name sleepedf --output_dir ./outputs
 ```
 
 ## Citation

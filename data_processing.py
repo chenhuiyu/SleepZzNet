@@ -64,6 +64,6 @@ def get_mixed_subject_data(signals, labels):
     train_x = np.concatenate(signals, axis=0)
     train_y = np.concatenate(labels, axis=0)
     # train_x = np.expand_dims(train_x, axis=-1)
-    train_y = np.array(train_y, dtype=np.float32)
-    train_y = train_y.reshape(-1, 1)
+    train_y = np.array(train_y, dtype=np.int32)
+    train_y = train_y.reshape(-1)
     return train_x, train_y, length
